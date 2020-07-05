@@ -5,71 +5,35 @@
   background-color: #4CAF50; /* Green background */
   border: 1px solid green; /* Green border */
   color: white; /* White text */
-  padding: 75px 75px; /* Some padding */
+  padding: 100px 100px; /* Some padding */
 }
 
-
+window.paintIt = function(event, backgroundColor, textColor) {
+  event.preventDefault();
+  event.target.style.backgroundColor = backgroundColor;
+  if (textColor) {
+    event.target.style.color = textColor;
+  }
+}
 
 /* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-
-.btn-group button:active{
-  background-color: black;
-}
-
-.btn-group button:focus{
-  background-color: black;
-}
 
 </style>
 <body>
 
+<h1>
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
-<div class="btn-group">
-  <button>Apple</button>
-  <button>Samsung</button>
-  <button>Sony</button>
-  <button>Sony</button>
-  <button>Sony</button>
-</div>
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
+</h1>
 
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
-<div class="btn-group">
-  <button>Apple</button>
-  <button>Samsung</button>
-  <button>Sony</button>
-  <button>Sony</button>
-  <button>Sony</button>
-</div>
-
-<div class="btn-group">
-  <button>Apple</button>
-  <button>Samsung</button>
-  <button>Sony</button>
-  <button>Sony</button>
-  <button>Sony</button>
-</div>
-
-<div class="btn-group">
-  <button>Apple</button>
-  <button>Samsung</button>
-  <button>Sony</button>
-  <button>Sony</button>
-  <button>Sony</button>
-</div>
-
-
-<div class="btn-group">
-  <button>Apple</button>
-  <button>Samsung</button>
-  <button>Sony</button>
-  <button>Sony</button>
-  <button>Sony</button>
-</div>
+<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
 </body>
 </html>
