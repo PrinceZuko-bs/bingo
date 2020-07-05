@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html>
-<body>
 
 
+
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+</style>
 
 <script>
-function colorChange() {
-var button = document.getElementById('button1').style.backgroundColor;  
-var color = '';
+ 
+// Only 3 colours and buttons for a test.
+// This list of colours
+var cList = ['#f00','#4CAF50'];
+// The butExtend object will become an array here
+var butList = [];
 
-if (button !== 'green') {
-    color = 'green';
-    document.getElementById('button1').style.backgroundColor = color;       
+// This object keeps track of the number of button clicks.
+var ButExtend = function butObj(id) {
+  this.count = 0;
+  if (document.getElementById(id)) {
+    document.getElementById(id).addEventListener('click',bClick,false);
+  }
+};
 
-    }
-else if (button === 'green') {
-    color = 'red';
-    document.getElementById('button1').style.backgroundColor = color; 
-
-    }
+// Called on a button click
+function bClick() {
+  this.style.backgroundColor = cList[butList[this.id].count];
+  butList[this.id].count++;
+  if (butList[this.id].count >= cList.length) {
+    butList[this.id].count = 0;
+  }
 }
+
+window.onload = function() {
+  // The list of id's for the buttons.
+  var bId = ['b1','b2','b3'];
+  for(x in bId) {
+    butList[bId[x]] = new ButExtend(bId[x]);
+  }
+}
+
 </script>
 
 
-<h1>
-  <input type="button" id="button1" class="button" onclick="colorChange()" value="Click Here" />
-</h1>
+<body>
+
+
+<button class="button" id="b1">Green</button>
+<button class="button" id="b2">Green</button>
+<button class="button" id="b3">Green</button>
+
+
 
 
 </body>
