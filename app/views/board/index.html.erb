@@ -1,39 +1,32 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-<style>
-.btn-group button {
-  background-color: #4CAF50; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 100px 100px; /* Some padding */
-}
-
-window.paintIt = function(event, backgroundColor, textColor) {
-  event.preventDefault();
-  event.target.style.backgroundColor = backgroundColor;
-  if (textColor) {
-    event.target.style.color = textColor;
-  }
-}
-
-/* Add a background color on hover */
-
-</style>
 <body>
 
+
+
+<script>
+function colorChange() {
+var button = document.getElementById('button1').style.backgroundColor;  
+var color = '';
+
+if (button !== 'green') {
+    color = 'green';
+    document.getElementById('button1').style.backgroundColor = color;       
+
+    }
+else if (button === 'green') {
+    color = 'red';
+    document.getElementById('button1').style.backgroundColor = color; 
+
+    }
+}
+</script>
+
+
 <h1>
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
-
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
-
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
+  <input type="button" id="button1" class="button" onclick="colorChange()" value="Click Here" />
 </h1>
 
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
-
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
-
-<button href="#" onclick="this.style.backgroundColor='#990000';event.preventDefault();">Paint it red</button>
 
 </body>
 </html>
