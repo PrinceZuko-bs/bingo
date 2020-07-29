@@ -14,19 +14,20 @@ var toggle = $(this).attr('class');
 });
 
 
-$('h1').on('click', function() {
-var toggle = $(this).attr('class');
-  if(toggle == 'hot'){
-      $(this).css('background-color', '#26deaa');
-       $(this).attr('class', 'cool');
-  }
-  else if(toggle == 'cool'){
+console.log("posts.js loaded");
+
+var ready;
+ready = function() {
+
+  $("#page").on("click", function(event) {
+    console.log("link clicked");
     $(this).css('background-color', '#ed5182');
-    $(this).attr('class', 'hot');
-  }
+  });
 
+};
 
-});
+$(document).ready(ready);
+$(document).on("page:load", ready);
 
 
 function sleep(ms) {
