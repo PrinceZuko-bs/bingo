@@ -7,12 +7,11 @@ console.log("posts.js loaded");
 var ready;
 ready = function() {
   $('li').on('click', function() {
-  var toggle = $(this).attr('class');
-    if(toggle == 'hot'){
-        $(this).css('background-color', '#26deaa');
-         $(this).attr('class', 'cool');
-    }
-    else if(toggle == 'cool'){
+    var toggle = $(this).attr('class');
+    if (toggle == 'hot') {
+      $(this).css('background-color', '#26deaa');
+      $(this).attr('class', 'cool');
+    } else if (toggle == 'cool') {
       $(this).css('background-color', '#ed5182');
       $(this).attr('class', 'hot');
     }
@@ -41,7 +40,7 @@ ready = function() {
   });
 
 
-  function removeOptions(){
+  function removeOptions() {
     $('li#checkAnswer').css('background-color', '#403c3b');
     $('li#checkAnswer').text('');
     $('div#left').fadeOut();

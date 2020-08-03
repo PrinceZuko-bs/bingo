@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 
-
 <html>
 
+  <head></head>
 
+  <body>
 
-<head>
+    <h1>&nbsp welcome to my first webpage.</h1>
+    <%= javascript_pack_tag 'my_js' %>
+    <%= stylesheet_link_tag 'c03.css' %>
 
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one" class="hot">user response #1</li>
+        <li id="two" class="hot">user response #2</li>
+        <li id="three" class="hot">user response #3</li>
+      </ul>
+      <ul>
+        <li id="checkAnswer" class="belowOn">user response #1</li>
+        <div id="left" class="boxLeft">
+          Wrong
+        </div>
+        <div id="right" class="boxRight">
+          Validate
+        </div>
 
+      </ul>
 
-</head>
-
-<body>
-
-<h1>&nbsp welcome to my first webpage.</h1>
-<%= javascript_pack_tag 'my_js' %>
-<%= stylesheet_link_tag 'c03.css' %>
-
-<div id="page">
-  <h1 id="header">List</h1>
-  <h2>Buy groceries</h2>
-  <ul>
-    <li id="one" class="hot">user response #1</li>
-    <li id="two" class="hot">user response #2</li>
-    <li id="three" class="hot">user response #3</li>
-  </ul>
-  <ul>
-    <li id="checkAnswer" class="belowOn">user response #1</li>
-    <div id="left" class="boxLeft">
-      Wrong
-    </div>
-    <div id="right" class="boxRight">
-      Validate
-    </div>
-
-  </ul>
-
-</body>
-</html>
+    </body>
+  </html>
